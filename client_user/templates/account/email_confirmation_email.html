@@ -1,0 +1,10 @@
+{% autoescape off %}
+Hi {{ user.first_name }},
+
+Please click the link below to confirm your email address and activate your account:
+
+http://{{ domain }}{% url 'account_confirm_email' uidb64=uid token=token %}
+
+Thank you,
+The Team
+{% endautoescape %}

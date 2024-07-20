@@ -1,0 +1,14 @@
+<!-- templates/downloads.html -->
+{% if user.is_authenticated %}
+    <h1>Available Files</h1>
+    <ul>
+    {% for file in files %}
+        <li>
+            {{ file.file.name }}
+            <a href="{% url 'download_file' file.id %}">Download</a>
+        </li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>You need to be logged in to view this page.</p>
+{% endif %}
