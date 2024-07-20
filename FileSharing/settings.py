@@ -9,6 +9,7 @@ https://docs.djangoproject.com/en/4.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
+import os
 
 from pathlib import Path
 
@@ -162,7 +163,6 @@ EMAIL_USE_SSL = os.getenv('EMAIL_USE_SSL') == 'True'
 # Default "from" address for email sent by Django
 DEFAULT_FROM_EMAIL = 'guidelocal849@gmail.com'
 
-import os
 
 # Directory where uploaded files will be stored
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
